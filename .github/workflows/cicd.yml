@@ -17,7 +17,7 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - run: touch ./src/main/resources/application.properties
+      - run: touch .Learner/src/main/resources/application.properties
 
       - run: echo "${{secrets.APPLICATION}}" > ./src/main/resources/application.properties
 

@@ -17,14 +17,14 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - run: touch .Learner/src/main/resources/application.properties
+      - run: touch ./Learner/src/main/resources/application.properties
 
-      - run: echo "${{secrets.APPLICATION}}" > ./src/main/resources/application.properties
+      - run: echo "${{secrets.APPLICATION}}" > ./Learner/src/main/resources/application.properties
 
       - uses: actions/upload-artifact@v3  # 버전을 v3로 변경
         with:
           name: application.properties
-          path: ./src/main/resources/application.properties
+          path: ./Learner/src/main/resources/application.properties
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew

@@ -71,3 +71,11 @@ clean {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'edu.example.LearnerApplication' // 실제 메인 클래스 이름으로 변경
+        )
+    }
+}
